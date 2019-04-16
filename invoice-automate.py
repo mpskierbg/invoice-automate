@@ -15,9 +15,9 @@ def sendmail(attachment):
     Msg = o.CreateItem(0)
     Msg.Importance = 0
     Msg.Subject = today +' Invoice'
-    Msg.HTMLBody = '<p> Hello Leslie, <br> <br> Here is the invoice for ' + today + '<br><br>In Solidarity,<br>Matthew Senko<p/>'
+    Msg.HTMLBody = '<p> Hello Leslie, <br> <br> Here is the invoice for ' + today + '<br><br>In Solidarity,<br>name<p/>'
 
-    Msg.To = "matthew.senko@allensuperiorcourt.us"
+    Msg.To = "myemail.com"
     Msg.Attachments.Add("C:\\Users\\MASEAB\\Documents\\" + attachment)
 
 
@@ -61,21 +61,21 @@ def main():
         section.top_margin = Inches(.45)
         section.bottom_margin = Inches(.45)
 
-    doc.add_paragraph('Matthew Senko')
+    doc.add_paragraph('name')
 
-    doc.add_paragraph('Law Clerk for the Commercial Court of Northern Indiana')
-
-    space(doc)
-
-    doc.add_paragraph('4525 Tacoma Ave')
-
-    doc.add_paragraph('Fort Wayne, IN 46807')
+    doc.add_paragraph('jobn')
 
     space(doc)
 
-    doc.add_paragraph('260-450-9556')
+    doc.add_paragraph('address')
 
-    doc.add_paragraph('msenko2@gmail.com')
+    doc.add_paragraph('address')
+
+    space(doc)
+
+    doc.add_paragraph('number')
+
+    doc.add_paragraph('email')
 
     space(doc)
     space(doc)
@@ -89,11 +89,11 @@ def main():
 
     space(doc)
 
-    doc.add_paragraph('Commercial Courts of Northern Indiana - Allen, Elkhart, and Lake Counties')
+    doc.add_paragraph('employer')
 
     space(doc)
 
-    re = doc.add_paragraph().add_run('RE: Law Clerk services')
+    re = doc.add_paragraph().add_run('RE: services')
     font = re.font
     font.bold = True
     
@@ -106,7 +106,7 @@ def main():
      
     space(doc)
 
-    doc.add_paragraph("Law Clerk Services for the time period of:")
+    doc.add_paragraph("Services for the time period of:")
 
     doc.add_paragraph(twoweeks + " to " + today)
 
@@ -114,7 +114,7 @@ def main():
 
     doc.add_paragraph("Total fees:")
 
-    doc.add_paragraph("$2,353.85")
+    doc.add_paragraph("$money")
     
     doc.save(today + 'invoice.docx')
     os.startfile(today + 'invoice.docx')
